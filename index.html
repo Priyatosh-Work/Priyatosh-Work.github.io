@@ -3,33 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Priyatosh Ghosh - Portfolio</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background: linear-gradient(to bottom, #111827, #1f2937, #111827);
+          color: #f3f4f6;
+        }
+        .container { max-width: 1200px; margin: auto; padding: 1.5rem; }
+        header, footer { padding: 1rem 0; }
+        header .flex { display: flex; justify-content: space-between; align-items: center; }
+        .avatar { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; border: 2px solid #6366f1; }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+        nav a { margin-left: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem; text-decoration: none; color: white; font-size: 0.875rem; }
+        nav a.linkedin { background: #4f46e5; }
+        nav a.github { background: #374151; }
+        nav a.contact { background: #16a34a; }
+        section.hero { background: linear-gradient(to right, #4338ca, #6d28d9); padding: 2rem; border-radius: 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+        .hero-text { max-width: 600px; }
+        .hero-text h2 { font-size: 2rem; margin: 0; }
+        .hero-text p { margin-top: 0.5rem; }
+        .hero-text .buttons a { margin-top: 1rem; display: inline-block; margin-right: 0.5rem; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: bold; }
+        .btn-linkedin { background: #fff; color: #4338ca; }
+        .btn-github { border: 1px solid rgba(255,255,255,0.3); color: #fff; background: rgba(255,255,255,0.1); }
+        .hero-img { width: 208px; height: 208px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(255,255,255,0.1); margin-top: 1rem; }
+        .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media(min-width: 1024px) { .grid { grid-template-columns: 1fr 2fr; } }
+        .card { background: #1f2937; padding: 1.5rem; border-radius: 1rem; }
+        .skills ul { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.5rem; list-style: none; padding: 0; }
+        .skills li { background: #374151; padding: 0.5rem; border-radius: 0.5rem; font-size: 0.875rem; }
+        .projects .proj { background: #374151; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+        .experience .job { border-left: 2px solid #374151; padding-left: 1rem; margin-bottom: 1rem; }
+        .experience .job h4 { margin: 0; }
+        footer { text-align: center; color: #9ca3af; font-size: 0.875rem; }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Hello, I'm Priyatosh 👋</h1>
-    <p>Android & iOS Developer | Flutter Enthusiast</p>
+<header class="container">
+    <div class="flex">
+        <div style="display:flex;align-items:center;gap:1rem;">
+            <div class="avatar"><img src="IMG_5316.jpg" alt="Priyatosh" /></div>
+            <div>
+                <h1>Priyatosh Ghosh</h1>
+                <p style="font-size:0.875rem;color:#d1d5db;">Mobile Application Developer • Kolkata, India</p>
+            </div>
+        </div>
+        <nav>
+            <a href="https://www.linkedin.com/in/priyatosh-ghosh" target="_blank" class="linkedin">LinkedIn</a>
+            <a href="https://github.com/priyatosh-work" target="_blank" class="github">GitHub</a>
+            <a href="mailto:priyatosh.work@gmail.com" class="contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>I build mobile apps and love working with Android, iOS, and Flutter.</p>
+<section class="container hero">
+    <div class="hero-text">
+        <h2>Hi, I'm Priyatosh 👋</h2>
+        <p>I build scalable, maintainable and beautiful mobile apps — Android, iOS and Flutter.</p>
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/priyatosh-ghosh" target="_blank" class="btn-linkedin">View LinkedIn</a>
+            <a href="https://github.com/priyatosh-work" target="_blank" class="btn-github">View GitHub</a>
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="IMG_5316.jpg" alt="Priyatosh" />
+    </div>
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <ul>
-        <li>🚖 Rider App (like Ola/Uber)</li>
-        <li>📊 Survey Tool App</li>
-        <li>💰 Expense Tracker App</li>
-    </ul>
-</section>
+<main class="container grid" style="margin-top:2rem;">
+    <section class="card">
+        <h2>About</h2>
+        <p>Dynamic Mobile App Developer with 6+ years of experience building native Android, iOS and Flutter apps. Strong focus on performance, architecture and delightful UX.</p>
+        <p><strong>Email:</strong> priyatosh.work@gmail.com<br>
+            <strong>Phone:</strong> +91 8768062939<br>
+            <strong>Location:</strong> Kolkata, India</p>
+    </section>
 
-<footer>
-    <p>Connect with me on <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+    <section class="card skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Android (Java, Kotlin)</li>
+            <li>Jetpack Compose</li>
+            <li>iOS (Swift, SwiftUI)</li>
+            <li>Flutter (Dart)</li>
+            <li>MVVM / Redux</li>
+            <li>Dagger 2</li>
+            <li>Room / SQLite / Realm</li>
+            <li>Retrofit / REST</li>
+            <li>Espresso / Mockito</li>
+            <li>Jenkins / Gradle</li>
+        </ul>
+    </section>
+
+    <section class="card projects" style="grid-column: span 2;">
+        <h2>Selected Projects</h2>
+        <div class="proj"><h4>Banking App</h4><p>Advanced Android app with DI, pagination, image picker, unit & UI tests.</p></div>
+        <div class="proj"><h4>Survey Tool App</h4><p>Dynamic questionnaire engine, custom file picker library and offline DB support.</p></div>
+        <div class="proj"><h4>Rider App</h4><p>Driver & user location tracking, integration with Google Maps APIs and Play Store release.</p></div>
+        <div class="proj"><h4>E-commerce (Flutter)</h4><p>Beautiful UI using neumorphism and REST API integration.</p></div>
+        <div class="proj"><h4>Expense Tracker (Android)</h4><p>Room DB, camera capture and dark mode support.</p></div>
+    </section>
+
+    <section class="card experience" style="grid-column: span 2;">
+        <h2>Experience</h2>
+        <div class="job"><h4>Technology Analyst - Infosys Limited</h4><small>Mar 2022 - Present</small>
+            <ul><li>Lead Android team and delivered features across native Android & iOS.</li><li>Collaborated with designers to improve UX (30% increase in engagement).</li><li>Mentored juniors, ran code reviews and CI/CD pipelines.</li></ul>
+        </div>
+        <div class="job"><h4>Mobile Application Developer - Frametrics Consulting Pvt Ltd.</h4><small>Jul 2019 - Feb 2022</small>
+            <ul><li>Worked on Android and iOS apps, deployed to Play Store / App Store.</li><li>Integrated Firebase services and optimized app performance.</li></ul>
+        </div>
+        <div class="job"><h4>Android Intern - Frametrics Consulting Pvt Ltd.</h4><small>Jan 2019 - Jun 2019</small>
+            <ul><li>Implemented features, wrote tests, participated in Agile ceremonies.</li></ul>
+        </div>
+    </section>
+
+    <section class="card" style="grid-column: span 2;">
+        <h2>Contact</h2>
+        <p>Interested in working together? I’m currently open to opportunities and collaborations.</p>
+        <p><a href="mailto:priyatosh.work@gmail.com" class="contact">Email me</a> | <a href="https://www.linkedin.com/in/priyatosh-ghosh" target="_blank" class="linkedin">LinkedIn</a></p>
+    </section>
+</main>
+
+<footer class="container">
+    © 2025 Priyatosh Ghosh — Built with ❤️ • Available on LinkedIn & GitHub
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>
